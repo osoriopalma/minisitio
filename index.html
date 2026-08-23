@@ -10,94 +10,204 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid p-0">
       <body>
         <div class="col">
-
-      <!-- Inicio header -->
-      <header class="border">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid bg-dark bg-opacity-50 text-white p-4">
-            <a class="navbar-brand" href="Index.html"
-              ><img src="assets/logo.png" width="22" class="img-fluid" alt=""
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="Index.html"
-                    >Miuslirics.com</a
+          <!-- inicio landing page -->
+          <section id="herosection">
+            <!-- Inicio header -->
+            <header>
+              <nav
+                class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-100 text-white p-0"
+              >
+                <div class="container-fluid p-0">
+                  <a class="navbar-brand" href="index.html"
+                    ><img
+                      src="assets/logo.png"
+                      width="150"
+                      class="img-fluid"
+                      alt="Logo"
+                  /></a>
+                  <button
+                    class="navbar-toggler me-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                   >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="">Top ten</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Play music</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">Genres</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Top ten</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Play music</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Géneros</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex me-3" role="search">
+                      <button
+                        class="btn btn-success text-decoration-underline me-2"
+                        type="submit"
+                      >
+                        Iniciar Sesión
+                      </button>
+                      <button class="btn btn-danger" type="submit">
+                        Registrate
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            </header>
+            <!-- fin header -->
+            <br />
+            <h1 class="titlehero">Las mejores recomendaciones musicales</h1>
+            <br />
+            <p class="parrafohero pt-3">
+              La mejor selección de todas las decadas.
+            </p>
+            <p class="parrafohero2 pt-2">
+              <strong>¿Que la música no pare?</strong>
+              Inicia con tu correo para crear tu cuenta o reactivar tu pase al
+              escenario.
+            </p>
+            <div class="parrafohero2 container-fluid p-5 w-50">
+              <form class="d-flex pt-3" role="search">
                 <input
                   class="form-control me-2"
                   type="search"
-                  placeholder="Search"
+                  placeholder="Género o Artista"
                   aria-label="Search"
                 />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
+                <button class="btn btn-danger me-2" type="submit">
+                  Buscar
                 </button>
               </form>
             </div>
-          </div>
-        </nav>
-      </header>
-      <!-- fin header -->
-          <!-- inicio landing page -->
-          <section id="herosection">
-            landing page
             <br />
-            <br />
-            <h1 class="titlehero">Las mejores recomendaciones musicales</h1>
-            <!--*Se asigno clase al titulo principal para su personalizacion-->
-            <br />
-            <p class="parrafohero">A partir de $139. Cancela cuando quieras.</p>
-            <p class="parrafohero2">
-              ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o
-              reiniciar tu membresía de Netflix.
-            </p>
-            <br />
+            <!-- inicio Top ten Cards -->
+          <section>
+<!-- Contenedor principal compacto -->
+<div class="cards-container container-fluid px-2 w-75">
+  <div class="row flex-nowrap row-cols-md-5 g-2 custom-carousel">
+    
+    <!-- Tarjeta 1 -->
+    <div class="col card-wrapper">
+      <div class="card p-0 h-100 compact-card">
+        <img src="assets/album1.jpeg" class="card-img-top" alt="..." />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 fw-bold">Special feeling</h6>
+          <p class="card-text text-muted small-text">Un tema de metal industrial oscuro...</p>
+        </div>
+        <ul class="list-group list-group-flush small-text">
+          <li class="list-group-item p-2"><strong>Título:</strong> Crown</li>
+          <li class="list-group-item p-2"><strong>Autor:</strong> Curro</li>
+          <li class="list-group-item p-2"><strong>Fecha:</strong> 15/03/26</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col card-wrapper">
+      <div class="card p-0 h-100 compact-card">
+        <img src="assets/album2.jpeg" class="card-img-top" alt="..." />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 fw-bold">Special feeling</h6>
+          <p class="card-text text-muted small-text">Un tema de metal industrial oscuro...</p>
+        </div>
+        <ul class="list-group list-group-flush small-text">
+          <li class="list-group-item p-2"><strong>Título:</strong> Crown</li>
+          <li class="list-group-item p-2"><strong>Autor:</strong> Curro</li>
+          <li class="list-group-item p-2"><strong>Fecha:</strong> 15/03/26</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col card-wrapper">
+      <div class="card p-0 h-100 compact-card">
+        <img src="assets/album3.jpeg" class="card-img-top" alt="..." />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 fw-bold">Special feeling</h6>
+          <p class="card-text text-muted small-text">Un tema de metal industrial oscuro...</p>
+        </div>
+        <ul class="list-group list-group-flush small-text">
+          <li class="list-group-item p-2"><strong>Título:</strong> Crown</li>
+          <li class="list-group-item p-2"><strong>Autor:</strong> Curro</li>
+          <li class="list-group-item p-2"><strong>Fecha:</strong> 15/03/26</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="col card-wrapper">
+      <div class="card p-0 h-100 compact-card">
+        <img src="assets/album4.jpeg" class="card-img-top" alt="..." />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 fw-bold">Special feeling</h6>
+          <p class="card-text text-muted small-text">Un tema de metal industrial oscuro...</p>
+        </div>
+        <ul class="list-group list-group-flush small-text">
+          <li class="list-group-item p-2"><strong>Título:</strong> Crown</li>
+          <li class="list-group-item p-2"><strong>Autor:</strong> Curro</li>
+          <li class="list-group-item p-2"><strong>Fecha:</strong> 15/03/26</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="col card-wrapper">
+      <div class="card p-0 h-100 compact-card">
+        <img src="assets/album5.jpeg" class="card-img-top" alt="..." />
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 fw-bold">Special feeling</h6>
+          <p class="card-text text-muted small-text">Un tema de metal industrial oscuro...</p>
+        </div>
+        <ul class="list-group list-group-flush small-text">
+          <li class="list-group-item p-2"><strong>Título:</strong> Crown</li>
+          <li class="list-group-item p-2"><strong>Autor:</strong> Curro</li>
+          <li class="list-group-item p-2"><strong>Fecha:</strong> 15/03/26</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          </section>
+          <!-- Fin Top ten Cards -->
           </section>
           <!-- fin landing page -->
-          <section>Top ten Cards</section>
-          <section>player</section>
+          
+          <section>
+            player
+            <audio
+              src="assets/mixkit-this-our-year-happy-new-year-927.mp3"
+              controls
+            ></audio>
+          </section>
           <section>Generos</section>
         </div>
       </body>
       <footer>
         <div class="card">
-          <h5 class="card-header">miuslirics.com</h5>
+          <h5 class="card-header">muslirics.com</h5>
           <div class="card-body">
             <h5 class="card-title">Todos los derechos reservados</h5>
             <p class="card-text">
@@ -107,9 +217,8 @@
                 width="14"
                 alt=""
               />
-              Todos los derechos reservados miuslirics.com 2015-2026
+              Todos los derechos reservados muslirics.com 2015-2026
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </footer>
