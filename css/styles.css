@@ -1,0 +1,298 @@
+/* ===============================================================
+   Estilos globales del proyecto
+   Este bloque define la base visual de la página.
+   Aquí se establecen colores, márgenes y tipografías generales.
+   =============================================================== */
+body {
+  margin: 0; /* Elimina el margen por defecto del navegador */
+  background-color: rgba(19, 20, 20, 0.904); /* Fondo oscuro */
+  color: #f5f5f5; /* Texto principal claro */
+  font-family: Arial, Helvetica, sans-serif; /* Fuente base limpia y legible */
+}
+
+img {
+  max-width: 100%; /* Asegura que las imágenes no se salgan de su contenedor */
+  display: block; /* Evita espacios extra debajo de imágenes */
+}
+
+/* ===============================================================
+   Sección Hero / portada principal
+   Esta parte crea la primera vista visual del sitio, con fondo,
+   texto grande y una estructura centrada.
+   =============================================================== */
+#herosection {
+  position: relative; /* Necesario para poner capas encima del fondo */
+  background-image: url("../assets/fondo.png"); /* Imagen de fondo */
+  background-size: cover; /* Hace que la imagen cubra todo el bloque */
+  background-position: center; /* Centra la imagen */
+  min-height: 78vh; /* Altura mínima para que se vea grande en desktop */
+  color: rgb(235, 236, 236); /* Color del texto del hero */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+#herosection::before {
+  content: ""; /* Necesario para crear una capa superpuesta */
+  position: absolute; /* Se coloca encima del fondo */
+  inset: 0; /* Ocupa todo el espacio */
+  background: rgba(5, 5, 5, 0.5); /* Oscurece la imagen para mejorar legibilidad */
+}
+
+header,
+.hero-content,
+.main-content,
+.site-footer {
+  position: relative; /* Permite que queden por encima del overlay oscuro */
+  z-index: 1; /* Lleva estos elementos por delante del pseudo-elemento */
+}
+
+/* ===============================================================
+   Navegación principal
+   Aquí se personaliza la barra de navegación superior.
+   =============================================================== */
+.navbar {
+  background: rgba(17, 17, 17, 0.88) !important; /* Fondo oscuro con transparencia */
+  backdrop-filter: blur(3px); /* Efecto suave de vidrio */
+}
+
+.navbar-brand {
+  padding-left: 0.75rem; /* Espacio a la izquierda del logo */
+}
+
+.nav-link {
+  color: #fff !important; /* Fuerza el color blanco en los enlaces */
+}
+
+/* ===============================================================
+   Contenido del Hero
+   Se centra el texto, el formulario y la estructura visual.
+   =============================================================== */
+.hero-content {
+  display: flex; /* Convierte el bloque en un contenedor flexible */
+  flex-direction: column; /* Organiza el contenido en vertical */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  min-height: calc(78vh - 76px); /* Altura del contenido ajustada al header */
+  padding: 2rem 1rem 3rem; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+.titlehero {
+  font-size: clamp(2.2rem, 4vw, 5rem); /* Tamaño adaptable según el ancho */
+  font-weight: bold; /* Texto en negrita */
+  max-width: 700px; /* Limita el ancho para mejor lectura */
+  margin: 0 auto; /* Centra el elemento */
+  line-height: 1.1; /* Ajusta la altura de linea */
+}
+
+.parrafohero {
+  font-size: clamp(1.1rem, 2vw, 2rem); /* Tamaño adaptable */
+  font-weight: bold;
+  margin: 1rem auto 0;
+  max-width: 850px;
+}
+
+.parrafohero2 {
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  margin: 1rem auto 0;
+  max-width: 750px;
+  line-height: 1.5; /* Mayor separación entre líneas */
+}
+
+/* ===============================================================
+   Formulario del hero
+   Este bloque da estilo al input y al botón para invitar a suscribirse.
+   =============================================================== */
+.hero-form {
+  display: flex; /* Coloca input y botón en una fila */
+  gap: 0.75rem; /* Separación entre ambos */
+  width: min(100%, 700px); /* Limita su ancho */
+  margin-top: 1.5rem;
+}
+
+.hero-form .form-control {
+  min-height: 48px; /* Altura mínima */
+  border-radius: 999px; /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde suave */
+  background: rgba(255, 255, 255, 0.08); /* Fondo semitransparente */
+  color: #fff; /* Texto blanco */
+}
+
+.hero-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Color del placeholder */
+}
+
+.hero-form .btn {
+  min-width: 140px; /* Ancho mínimo del botón */
+  border-radius: 999px; /* Botón con bordes redondeados */
+  font-weight: 700; /* Texto más grueso */
+}
+
+/* ===============================================================
+   Contenido principal de la página
+   Aquí se ajustan los títulos y el contenedor general.
+   =============================================================== */
+.main-content {
+  padding-top: 2rem; /* Espacio superior */
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 2.4vw, 2.5rem); /* Tamaño adaptable */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cards-container {
+  margin: 0 auto;
+}
+
+/* ===============================================================
+   Tarjetas de Top ten
+   Estilo visual para cada tarjeta de música.
+   =============================================================== */
+.compact-card {
+  font-size: 0.75rem; /* Reduce el tamaño del texto dentro de cada tarjeta */
+  background-color: #1d1d1d; /* Fondo oscuro */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde tenue */
+  border-radius: 18px; /* Bordes redondeados */
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.compact-card .card-img-top {
+  height: 180px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajusta la imagen para que cubra bien el espacio */
+}
+
+.small-text {
+  font-size: 0.7rem;
+  color: #c7c7c7;
+}
+
+.list-group-item {
+  background: transparent; /* Fondo transparente */
+  color: #f5f5f5; /* Texto claro */
+  border-color: rgba(255, 255, 255, 0.08); /* Borde muy sutil */
+}
+
+/* ===============================================================
+   Sección del reproductor de audio
+   Ajusta la apariencia del control de audio.
+   =============================================================== */
+.player-section {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.player-section audio {
+  display: block; /* Lo centra como bloque */
+  margin: 0 auto;
+  max-width: 760px; /* No se hace demasiado ancho */
+}
+
+/* ===============================================================
+   Etiquetas de géneros
+   Estilo para los chips de categorías musicales.
+   =============================================================== */
+.genre-tag {
+  display: inline-block; /* Se comporta como elemento en línea con tamaño */
+  padding: 0.7rem 1.2rem; /* Espaciado interno */
+  border-radius: 999px; /* Muy redondeado */
+  background: rgba(255, 255, 255, 0.08); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde suave */
+  font-weight: 600;
+}
+
+/* ===============================================================
+   Footer del sitio
+   Estilos finales para la sección de pie de página.
+   =============================================================== */
+.site-footer {
+  background: rgba(17, 17, 17, 0.88);
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer .container {
+  text-align: center;
+}
+
+.site-footer .card-header {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.site-footer .card-body {
+  padding: 0;
+}
+
+.site-footer .card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer .card-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===============================================================
+   Media queries
+   Aquí se ajusta el diseño para pantallas más pequeñas.
+   Los breakpoints son puntos de corte del ancho de pantalla.
+   =============================================================== */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-left: 1rem;
+  }
+
+  .hero-form {
+    flex-direction: column; /* En pantallas medianas, input y botón se apilan */
+  }
+
+  .hero-form .btn {
+    width: 100%; /* El botón ocupa todo el ancho */
+  }
+}
+
+@media (max-width: 767.98px) {
+  #herosection {
+    min-height: 62vh; /* Reduce la altura del hero en móvil */
+  }
+
+  .hero-content {
+    min-height: calc(62vh - 76px);
+    padding-inline: 1rem;
+  }
+
+  .parrafohero2 {
+    max-width: 100%;
+  }
+
+  .compact-card .card-img-top {
+    height: 150px; /* Reduce la altura de las imágenes en móvil */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand img {
+    width: 110px; /* Logo más pequeño en móvil */
+  }
+
+  .navbar .btn {
+    width: 100%; /* Botones de navegación ocupan todo el ancho */
+  }
+
+  .navbar .d-flex {
+    width: 100%;
+    flex-direction: column; /* Pila los botones verticalmente */
+  }
+
+  .card-wrapper {
+    width: 100%; /* Cada tarjeta ocupa todo el ancho en móvil */
+  }
+}
