@@ -1,20 +1,44 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!--
+      La sección head contiene la configuración básica del documento.
+      Aquí se define el idioma, la codificación y la vista inicial para móviles.
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
+
+    <!--
+      Se enlaza Bootstrap para reutilizar estilos y componentes listos para usar.
+      Esto ayuda a construir una página más rápida y con mejor apariencia.
+    -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+
+    <!--
+      Aquí se importa el archivo principal de estilos del proyecto.
+      Es el lugar donde se definen colores, tamaños, layout y diseño responsive.
+    -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
+    <!--
+      Hero o portada principal.
+      Es la primera sección que el usuario ve al entrar a la página.
+      Aquí se incluye el menú y el texto principal.
+    -->
     <section id="herosection">
       <header>
+        <!--
+          NavBar: contiene la navegación principal del sitio.
+          Tiene el logo, enlaces de menú y botones de acceso.
+        -->
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
           <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -60,6 +84,10 @@
         </nav>
       </header>
 
+      <!--
+        Contenido central de la portada.
+        Aquí se presenta el mensaje principal y una invitación para suscribirse.
+      -->
       <div class="hero-content container text-center">
         <h1 class="titlehero">Las mejores recomendaciones musicales</h1>
         <p class="parrafohero">La mejor selección de todas las décadas.</p>
@@ -75,7 +103,15 @@
       </div>
     </section>
 
+    <!--
+      La etiqueta main agrupa el contenido principal del sitio,
+      separado por secciones temáticas.
+    -->
     <main class="main-content">
+      <!--
+        Sección Top ten:
+        Muestra una selección de 5 álbumes o canciones destacadas.
+      -->
       <section class="top-ten" aria-labelledby="top-ten-title">
         <div class="container">
           <h2 id="top-ten-title" class="section-title">Top ten</h2>
@@ -159,6 +195,10 @@
         </div>
       </section>
 
+      <!--
+        Sección de reproducción de música.
+        Aquí se incluye el control de audio para escuchar una pista.
+      -->
       <section class="player-section container py-5">
         <h2 class="section-title">Play music</h2>
         <audio id="reproductor" controls class="w-100">
@@ -167,6 +207,10 @@
         </audio>
       </section>
 
+      <!--
+        Sección de géneros.
+        Presenta categorías musicales con etiquetas visuales.
+      -->
       <section class="genres-section container pb-5">
         <h2 class="section-title">Géneros</h2>
         <div class="d-flex flex-wrap gap-2 justify-content-center">
@@ -180,6 +224,10 @@
       </section>
     </main>
 
+    <!--
+      Footer o pie de página.
+      Aquí se coloca la marca y la información legal.
+    -->
     <footer class="site-footer">
       <div class="container">
         <h5 class="card-header">muslirics.com</h5>
@@ -193,6 +241,10 @@
       </div>
     </footer>
 
+    <!--
+      Scripts de Bootstrap y del proyecto.
+      El primero aporta funcionalidad visual, y el segundo puede manejar lógica adicional.
+    -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
